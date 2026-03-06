@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Adventure | Fun n Munch - Online Reservation</title>
+    <meta name="description"
+        content="Reserve your spot at Fun n Munch Castle World! Book online for Soft Play, Trampoline Park, or Mini Golf. Easy booking, instant confirmation.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reservation.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <img src="assets/images/logo.png" alt="Fun n Munch Logo">
+            </a>
+
+            <ul class="nav-menu mb-0" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#castle-world" class="nav-link">Castle World</a></li>
+                <li><a href="index.html#restaurants" class="nav-link">Restaurants</a></li>
+                <li><a href="reservation.html" class="nav-link active">Reservations</a></li>
+                <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="reservation-form.html" class="btn btn-yellow">Book
+                    Now</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Overlay -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- RESERVATION HERO -->
+    <section class="res-hero">
+        <div class="res-hero-bg">
+            <div class="res-hero-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="res-hero-content" data-aos="fade-up">
+                <span class="res-hero-badge"><i class="fas fa-ticket-alt"></i> Online Reservations</span>
+                <h1>Book Your <span class="text-highlight-yellow">Adventure</span></h1>
+                <p>Secure your spot at Castle World — choose your activity below and reserve online.
+                    No queues, no hassle!</p>
+                <div class="res-hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-bolt"></i>
+                        <span>Instant Confirmation</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Booking</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-undo-alt"></i>
+                        <span>Free Cancellation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORY TOGGLE -->
+    <section class="res-categories" id="booking">
+        <div class="container">
+            <div class="category-toggle" data-aos="fade-up">
+                <button class="cat-toggle-btn active" data-category="indoor" id="toggleIndoor">
+                    <i class="fas fa-chess-rook"></i>
+                    <span>Indoor Activities</span>
+                    <small>Soft Play & Trampoline</small>
+                </button>
+                <button class="cat-toggle-btn" data-category="outdoor" id="toggleOutdoor">
+                    <i class="fas fa-golf-ball"></i>
+                    <span>Outdoor Activities</span>
+                    <small>Mini Golf Course</small>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDOOR SECTION: Soft Play & Trampoline -->
+    <section class="res-section indoor-section active" id="indoorSection">
+        <div class="container">
+            <div class="res-section-header" data-aos="fade-up">
+                <span class="section-badge fun"><i class="fas fa-chess-rook"></i> Indoor Adventures</span>
+                <h2 class="section-title"><span class="highlight-green">Soft Play</span> & <span
+                        class="highlight-pink">Trampoline</span></h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Choose your preferred indoor activity and book your session. Perfect for kids and families!
+                </p>
+            </div>
+
+            <div class="booking-cards" data-aos="fade-up" data-aos-delay="100">
+                <!-- Soft Play Card -->
+                <div class="booking-card" id="card-softplay">
+                    <div class="booking-card-image">
+                        <img src="assets/images/castle-softplay.png" alt="Soft Play Area">
+                        <div class="booking-card-overlay">
+                            <span class="booking-badge green"><i class="fas fa-child"></i> Ages 2-12</span>
+                        </div>
+                    </div>
+                    <div class="booking-card-body">
+                        <div class="booking-card-header">
+                            <h3>Soft Play Area</h3>
+                            <div class="booking-price">
+                                <span class="price-label">From</span>
+                                <span class="price-value green">Rs. 1,500</span>
+                                <span class="price-period">/ child</span>
+                            </div>
+                        </div>
+                        <p>Castle-themed multi-level play structure with ball pits, slides, tunnels, and climbing walls.
+                            Safe, supervised fun for toddlers and kids.</p>
+                        <div class="booking-features">
+                            <span><i class="fas fa-check-circle"></i> Ball Pits</span>
+                            <span><i class="fas fa-check-circle"></i> Slides</span>
+                            <span><i class="fas fa-check-circle"></i> Climbing Walls</span>
+                            <span><i class="fas fa-check-circle"></i> Supervised</span>
+                        </div>
+                        <div class="booking-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>Session Duration: <strong>2 Hours</strong></span>
+                        </div>
+                        <a href="reservation-form.html?activity=softplay" class="btn btn-green booking-btn"
+                            id="btn-book-softplay">
+                            <i class="fas fa-calendar-check"></i> Book Soft Play
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Trampoline Card -->
+                <div class="booking-card" id="card-trampoline">
+                    <div class="booking-card-image">
+                        <img src="assets/images/trampoline-park.png" alt="Trampoline Park">
+                        <div class="booking-card-overlay">
+                            <span class="booking-badge pink"><i class="fas fa-users"></i> All Ages</span>
+                        </div>
+                    </div>
+                    <div class="booking-card-body">
+                        <div class="booking-card-header">
+                            <h3>Trampoline Park</h3>
+                            <div class="booking-price">
+                                <span class="price-label">From</span>
+                                <span class="price-value pink">Rs. 2,000</span>
+                                <span class="price-period">/ person</span>
+                            </div>
+                        </div>
+                        <p>Bounce, flip, and soar! Connected trampolines, slam dunk lanes, dodgeball courts, and foam
+                            pit diving — pure adrenaline for all ages.</p>
+                        <div class="booking-features">
+                            <span><i class="fas fa-check-circle"></i> Free Jump</span>
+                            <span><i class="fas fa-check-circle"></i> Dodgeball</span>
+                            <span><i class="fas fa-check-circle"></i> Slam Dunk</span>
+                            <span><i class="fas fa-check-circle"></i> Foam Pit</span>
+                        </div>
+                        <div class="booking-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>Session Duration: <strong>1 Hour</strong></span>
+                        </div>
+                        <a href="reservation-form.html?activity=trampoline" class="btn btn-pink booking-btn"
+                            id="btn-book-trampoline">
+                            <i class="fas fa-calendar-check"></i> Book Trampoline
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Book Online -->
+            <div class="why-book" data-aos="fade-up" data-aos-delay="200">
+                <div class="why-book-card">
+                    <div class="why-icon green-bg"><i class="fas fa-bolt"></i></div>
+                    <h4>Skip the Queue</h4>
+                    <p>Walk straight in with your confirmed booking — no waiting!</p>
+                </div>
+                <div class="why-book-card">
+                    <div class="why-icon pink-bg"><i class="fas fa-percent"></i></div>
+                    <h4>Online Discounts</h4>
+                    <p>Exclusive offers and discounts for online bookings only.</p>
+                </div>
+                <div class="why-book-card">
+                    <div class="why-icon yellow-bg"><i class="fas fa-calendar-alt"></i></div>
+                    <h4>Flexible Timing</h4>
+                    <p>Choose your preferred date and time slot easily.</p>
+                </div>
+                <div class="why-book-card">
+                    <div class="why-icon blue-bg"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Guaranteed Spot</h4>
+                    <p>Your spot is reserved and guaranteed — rain or shine!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUTDOOR SECTION: Mini Golf -->
+    <section class="res-section outdoor-section" id="outdoorSection">
+        <div class="container">
+            <div class="res-section-header" data-aos="fade-up">
+                <span class="section-badge fun"><i class="fas fa-golf-ball"></i> Outdoor Adventure</span>
+                <h2 class="section-title"><span class="highlight-blue">Mini Golf</span> Course</h2>
+                <p class="section-subtitle" style="margin: 0 auto;">
+                    Book your tee time on our beautifully themed 18-hole outdoor mini golf course!
+                </p>
+            </div>
+
+            <!-- Mini Golf Hero Card -->
+            <div class="minigolf-hero" data-aos="fade-up" data-aos-delay="100">
+                <div class="minigolf-image">
+                    <img src="assets/images/mini-golf.png" alt="Mini Golf Course">
+                    <div class="minigolf-overlay">
+                        <span class="minigolf-badge"><i class="fas fa-flag"></i> 18 Holes</span>
+                        <span class="minigolf-badge outdoor"><i class="fas fa-sun"></i> Outdoor</span>
+                    </div>
+                </div>
+                <div class="minigolf-info">
+                    <div class="minigolf-header">
+                        <h3>Castle-Themed Mini Golf</h3>
+                        <div class="booking-price">
+                            <span class="price-label">Per Round</span>
+                            <span class="price-value blue">Rs. 1,200</span>
+                            <span class="price-period">/ person</span>
+                        </div>
+                    </div>
+                    <p>Challenge your family and friends on our beautifully themed outdoor mini golf course! Creative
+                        obstacles, water features, and castle-themed decorations make every round an adventure.</p>
+
+                    <div class="minigolf-features">
+                        <div class="mg-feature">
+                            <div class="mg-feature-icon"><i class="fas fa-golf-ball"></i></div>
+                            <div>
+                                <strong>18 Themed Holes</strong>
+                                <span>Unique obstacles & water features</span>
+                            </div>
+                        </div>
+                        <div class="mg-feature">
+                            <div class="mg-feature-icon"><i class="fas fa-mountain"></i></div>
+                            <div>
+                                <strong>Outdoor Setting</strong>
+                                <span>Beautiful landscaped gardens</span>
+                            </div>
+                        </div>
+                        <div class="mg-feature">
+                            <div class="mg-feature-icon"><i class="fas fa-users"></i></div>
+                            <div>
+                                <strong>All Ages (5+)</strong>
+                                <span>Family-friendly fun for everyone</span>
+                            </div>
+                        </div>
+                        <div class="mg-feature">
+                            <div class="mg-feature-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <strong>~45 Min Per Round</strong>
+                                <span>Average time to complete course</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Time Slots -->
+                    <div class="time-slots-section">
+                        <h4><i class="fas fa-clock"></i> Available Time Slots</h4>
+                        <div class="time-slots-grid">
+                            <button class="time-slot" data-time="11:00">11:00 AM</button>
+                            <button class="time-slot" data-time="12:00">12:00 PM</button>
+                            <button class="time-slot" data-time="13:00">1:00 PM</button>
+                            <button class="time-slot" data-time="14:00">2:00 PM</button>
+                            <button class="time-slot" data-time="15:00">3:00 PM</button>
+                            <button class="time-slot" data-time="16:00">4:00 PM</button>
+                            <button class="time-slot" data-time="17:00">5:00 PM</button>
+                            <button class="time-slot" data-time="18:00">6:00 PM</button>
+                            <button class="time-slot" data-time="19:00">7:00 PM</button>
+                            <button class="time-slot" data-time="20:00">8:00 PM</button>
+                        </div>
+                    </div>
+
+                    <a href="reservation-form.html?activity=minigolf" class="btn btn-blue booking-btn"
+                        id="btn-book-minigolf">
+                        <i class="fas fa-calendar-check"></i> Book a Slot
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mini Golf Tips -->
+            <div class="mg-tips" data-aos="fade-up" data-aos-delay="200">
+                <div class="mg-tip-card">
+                    <span class="mg-tip-emoji">🏌️</span>
+                    <h4>Bring Everyone</h4>
+                    <p>Perfect for families, friends, or date night!</p>
+                </div>
+                <div class="mg-tip-card">
+                    <span class="mg-tip-emoji">👟</span>
+                    <h4>Wear Comfortable Shoes</h4>
+                    <p>The course has natural terrain — flat shoes work best.</p>
+                </div>
+                <div class="mg-tip-card">
+                    <span class="mg-tip-emoji">🌤️</span>
+                    <h4>Weather Check</h4>
+                    <p>Outdoor activity — check the weather before you visit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner" data-aos="fade-up">
+        <div class="container">
+            <div class="cta-text">
+                <h2>Need Help Booking?</h2>
+                <p>Our team is here to help! Call us for group bookings, birthday parties, and special events.</p>
+            </div>
+            <div class="cta-buttons">
+                <a href="tel:+923332221198" class="btn btn-yellow"><i class="fas fa-phone-alt"></i> Call Us Now</a>
+                <a href="https://wa.me/923332221198" class="btn btn-outline-white" target="_blank"><i
+                        class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.png" alt="Fun n Munch">
+                    <p>The ultimate family destination where thrilling adventures meet mouth-watering cuisine. Castle
+                        World's entertainment combined with 6 premium restaurants under one roof!</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Castle World</h4>
+                    <ul>
+                        <li><a href="index.html#castle-world"><i class="fas fa-angle-right"></i> Soft Play Area</a>
+                        </li>
+                        <li><a href="index.html#castle-world"><i class="fas fa-angle-right"></i> Trampoline Park</a>
+                        </li>
+                        <li><a href="index.html#castle-world"><i class="fas fa-angle-right"></i> Mini Golf</a></li>
+                        <li><a href="index.html#castle-world"><i class="fas fa-angle-right"></i> Car Rides</a></li>
+                        <li><a href="reservation.html"><i class="fas fa-angle-right"></i> Book Online</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Our Restaurants</h4>
+                    <ul>
+                        <li><a href="https://beannbarista.com/" target="_blank"><i class="fas fa-angle-right"></i> Bean
+                                N Barista</a></li>
+                        <li><a href="https://chatkharajunction.com/" target="_blank"><i class="fas fa-angle-right"></i>
+                                Chatkhara Junction</a></li>
+                        <li><a href="https://thepalmhouse.com.pk/" target="_blank"><i class="fas fa-angle-right"></i>
+                                The Palm House</a></li>
+                        <li><a href="https://pesto.com.pk/" target="_blank"><i class="fas fa-angle-right"></i> Pesto</a>
+                        </li>
+                        <li><a href="https://corba.com.pk/" target="_blank"><i class="fas fa-angle-right"></i> Corba</a>
+                        </li>
+                        <li><a href="https://vinchi.com.pk/" target="_blank"><i class="fas fa-angle-right"></i>
+                                Vinchi</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Get In Touch</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Fun n Munch Complex,<br>Your City, Pakistan</p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <p><a href="tel:+923332221198">+92 333 2221198</a></p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p><a href="mailto:info@funnmunch.com">info@funnmunch.com</a></p>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <p>Open Daily: 11:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fun n Munch. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to Top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+        // AOS
+        AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 60 });
+
+        // Navbar scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+            menuOverlay.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+        });
+
+        menuOverlay.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Category Toggle
+        const toggleBtns = document.querySelectorAll('.cat-toggle-btn');
+        const indoorSection = document.getElementById('indoorSection');
+        const outdoorSection = document.getElementById('outdoorSection');
+
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                toggleBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.dataset.category;
+                if (category === 'indoor') {
+                    indoorSection.classList.add('active');
+                    outdoorSection.classList.remove('active');
+                } else {
+                    outdoorSection.classList.add('active');
+                    indoorSection.classList.remove('active');
+                }
+
+                // Re-init AOS for newly visible elements
+                setTimeout(() => AOS.refresh(), 100);
+            });
+        });
+
+        // Time Slot Selection
+        const timeSlots = document.querySelectorAll('.time-slot');
+        timeSlots.forEach(slot => {
+            slot.addEventListener('click', () => {
+                timeSlots.forEach(s => s.classList.remove('selected'));
+                slot.classList.add('selected');
+
+                // Update the booking link with the selected time
+                const bookBtn = document.getElementById('btn-book-minigolf');
+                const currentHref = bookBtn.getAttribute('href').split('&time=')[0];
+                bookBtn.setAttribute('href', currentHref + '&time=' + slot.dataset.time);
+            });
+        });
+
+        // Back to top
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 400);
+        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({ top: target.offsetTop - 75, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Check URL params for pre-selection
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('category') === 'outdoor') {
+            document.getElementById('toggleOutdoor').click();
+        }
+    </script>
+
+</body>
+
+</html>
