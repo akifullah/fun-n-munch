@@ -34,10 +34,10 @@
             </a>
 
             <ul class="nav-menu mb-0" id="navMenu">
-                <li><a href="./index.html" class="nav-link active">Home</a></li>
-                <li><a href="./fun.html" class="nav-link">Castle World</a></li>
+                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li><a href="./fun.html" class="nav-link active">Castle World</a></li>
                 <li><a href="./munch.html" class="nav-link">Munch Zone</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="./gallery.html" class="nav-link">Gallery</a></li>
             </ul>
 
             <div class="nav-cta">
@@ -53,268 +53,106 @@
     <!-- Mobile Overlay -->
     <div class="menu-overlay" id="menuOverlay"></div>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <!-- Slider -->
-        <div class="hero-slide active">
-            <img src="assets/images/hero-fun.png" alt="Fun n Munch Entertainment">
-        </div>
-        <div class="hero-slide">
-            <img src="assets/images/castle-softplay.png" alt="Castle World">
-        </div>
-        <div class="hero-slide">
-            <img src="assets/images/hero-munch.png" alt="Delicious Dining">
-        </div>
-
-        <!-- Content -->
-        <div class="hero-content">
-            <div class="container">
-                <span class="hero-badge"><i class="fas fa-star"></i> #1 Family Destination</span>
-                <h1 class="hero-title">Where <span class="text-yellow">Fun</span> Meets <span class="">Flavor!</span>
-                </h1>
-                <p class="hero-description">Thrilling adventures at <strong>Castle World</strong> + mouth-watering food
-                    from <strong>6 restaurants</strong> — all under one roof!</p>
-                <div class="hero-buttons">
-                    <a href="./fun.html" class="btn btn-yellow">Explore Castle
-                        World</a>
-                    <a href="./munch.html" class="btn btn-outline-white">View
-                        Restaurants</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Dots -->
-        <div class="hero-dots">
-            <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
-            <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
-            <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
-        </div>
-
-    </section>
-    <!-- Quick Links -->
-    <div class="hero-quick-links">
-        <a href="./fun.html" class="quick-link-card">
-            <div class="ql-icon"><i class="fas fa-chess-rook"></i></div>
-            <div class="ql-text">
-                <strong>Castle World</strong>
-                <span>Soft Play &bull; Trampolines &bull; Mini Golf</span>
-            </div>
-            <i class="fas fa-arrow-right ql-arrow"></i>
-        </a>
-        <a href="./munch.html" class="quick-link-card">
-            <div class="ql-icon munch"><i class="fas fa-utensils"></i></div>
-            <div class="ql-text">
-                <strong>Munch</strong>
-                <span>Coffee &bull; Street Food &bull; Fine Dining</span>
-            </div>
-            <i class="fas fa-arrow-right ql-arrow"></i>
-        </a>
-    </div>
 
 
-  
-
-    <!-- GALLERY -->
-    <section class="gallery" id="gallery">
+    <!-- CASTLE WORLD ACTIVITIES -->
+    <section class="activities" id="castle-world">
         <div class="container">
-            <div class="gallery-header" data-aos="fade-up">
-                <span class="section-badge pink"><i class="fas fa-images"></i> Gallery</span>
-                <h2 class="section-title">Moments of <span class="highlight-pink">Fun & Flavor</span></h2>
+            <div class="activities-header" data-aos="fade-up">
+                <span class="section-badge fun"><i class="fas fa-chess-rook"></i> Castle World</span>
+                <h2 class="section-title"><span class="highlight-green">Thrilling Adventures</span> Await</h2>
                 <p class="section-subtitle" style="margin: 0 auto;">
-                    A peek at the incredible experiences waiting at Fun n Munch!
+                    Castle World offers exciting activities for every age group — from toddlers to adults!
                 </p>
             </div>
 
-            <div class="gallery-grid" data-aos="fade-up" data-aos-delay="100">
-                <div class="gallery-item"><img src="assets/images/hero-fun.png" alt="Castle World"></div>
-                <div class="gallery-item"><img src="assets/images/trampoline-park.png" alt="Trampoline Park"></div>
-                <div class="gallery-item"><img src="assets/images/restaurant-coffee.png" alt="Bean N Barista"></div>
-                <div class="gallery-item"><img src="assets/images/mini-golf.png" alt="Mini Golf"></div>
-                <div class="gallery-item"><img src="assets/images/hero-munch.png" alt="Dining"></div>
-                <div class="gallery-item"><img src="assets/images/car-rides.png" alt="Car Rides"></div>
-                <div class="gallery-item"><img src="assets/images/restaurant-streetfood.png" alt="Chatkhara Junction">
+            <!-- Soft Play -->
+            <div class="activity-row" data-aos="fade-up">
+                <div class="activity-image">
+                    <img src="assets/images/castle-softplay.png" alt="Soft Play & Trampoline">
+                    <span class="age-badge"><i class="fas fa-child"></i> Ages 2-12</span>
                 </div>
-                <div class="gallery-item"><img src="assets/images/restaurant-dessert.png" alt="Vinchi"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- IMAGE LIGHTBOX -->
-    <div class="img-lightbox" id="imgLightbox">
-        <div class="img-lightbox-backdrop"></div>
-        <div class="img-lightbox-content">
-            <button class="img-lb-close" id="imgLbClose" aria-label="Close"><i class="fas fa-times"></i></button>
-            <button class="img-lb-arrow img-lb-prev" id="imgLbPrev" aria-label="Previous"><i
-                    class="fas fa-chevron-left"></i></button>
-            <button class="img-lb-arrow img-lb-next" id="imgLbNext" aria-label="Next"><i
-                    class="fas fa-chevron-right"></i></button>
-            <img src="" alt="Gallery Preview" id="imgLbImage">
-            <div class="img-lb-counter"><span id="imgLbCurrent">1</span> / <span id="imgLbTotal">8</span></div>
-        </div>
-    </div>
-
-    <!-- VIDEO GALLERY -->
-    <section class="video-gallery" id="video-gallery">
-        <div class="container">
-            <div class="video-gallery-header" data-aos="fade-up">
-                <span class="section-badge fun"><i class="fas fa-video"></i> Video Gallery</span>
-                <h2 class="section-title">Experience the <span class="highlight-pink">Magic</span></h2>
-                <p class="section-subtitle" style="margin: 0 auto;">
-                    Watch our amazing activities and restaurants come to life!
-                </p>
-            </div>
-        </div>
-
-        <div class="video-slider-wrapper" data-aos="fade-up" data-aos-delay="100">
-            <div class="video-slider-track" id="videoSliderTrack">
-                <!-- Video 1 -->
-                <div class="video-slide" data-video="assets/videos/WhatsApp Video 2026-03-01 at 6.14.29 PM.mp4">
-                    <div class="video-card-inner">
-                        <video muted preload="metadata" playsinline>
-                            <source src="assets/videos/WhatsApp Video 2026-03-01 at 6.14.29 PM.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <div class="video-play-btn"><i class="fas fa-play"></i></div>
-                            <div class="video-info"><span class="video-duration"><i class="fas fa-clock"></i>
-                                    0:30</span></div>
-                        </div>
+                <div class="activity-info">
+                    <h3>Soft Play & Trampoline Park</h3>
+                    <p>Let your kids explore our magnificent castle-themed soft play area! Multi-level climbing
+                        structures, ball pits, slides, and a state-of-the-art trampoline park with foam pits and
+                        basketball hoops.</p>
+                    <div class="activity-features">
+                        <span class="activity-feature"><i class="fas fa-check"></i> Ball Pits</span>
+                        <span class="activity-feature"><i class="fas fa-check"></i> Slides</span>
+                        <span class="activity-feature"><i class="fas fa-check"></i> Trampolines</span>
+                        <span class="activity-feature"><i class="fas fa-check"></i> Foam Pit</span>
                     </div>
-                    <div class="video-caption">
-                        <h4>Fun n Munch Highlights</h4>
-                        <p>A glimpse into our world of fun!</p>
-                    </div>
-                </div>
-
-                <!-- Video 2 -->
-                <div class="video-slide" data-video="assets/videos/WhatsApp Video 2026-03-01 at 6.14.29 PM (1).mp4">
-                    <div class="video-card-inner">
-                        <video muted preload="metadata" playsinline>
-                            <source src="assets/videos/WhatsApp Video 2026-03-01 at 6.14.29 PM (1).mp4"
-                                type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <div class="video-play-btn"><i class="fas fa-play"></i></div>
-                            <div class="video-info"><span class="video-duration"><i class="fas fa-clock"></i>
-                                    0:45</span></div>
-                        </div>
-                    </div>
-                    <div class="video-caption">
-                        <h4>Castle World Adventures</h4>
-                        <p>Thrilling activities for all ages</p>
-                    </div>
-                </div>
-
-                <!-- Video 3 -->
-                <div class="video-slide" data-video="assets/videos/WhatsApp Video 2026-03-01 at 6.14.30 PM.mp4">
-                    <div class="video-card-inner">
-                        <video muted preload="metadata" playsinline>
-                            <source src="assets/videos/WhatsApp Video 2026-03-01 at 6.14.30 PM.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <div class="video-play-btn"><i class="fas fa-play"></i></div>
-                            <div class="video-info"><span class="video-duration"><i class="fas fa-clock"></i>
-                                    1:00</span></div>
-                        </div>
-                    </div>
-                    <div class="video-caption">
-                        <h4>Dining Experience</h4>
-                        <p>Where flavors meet perfection</p>
-                    </div>
-                </div>
-
-                <!-- Video 4 -->
-                <div class="video-slide" data-video="assets/videos/WhatsApp Video 2026-03-01 at 6.14.30 PM (1).mp4">
-                    <div class="video-card-inner">
-                        <video muted preload="metadata" playsinline>
-                            <source src="assets/videos/WhatsApp Video 2026-03-01 at 6.14.30 PM (1).mp4"
-                                type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <div class="video-play-btn"><i class="fas fa-play"></i></div>
-                            <div class="video-info"><span class="video-duration"><i class="fas fa-clock"></i>
-                                    1:30</span></div>
-                        </div>
-                    </div>
-                    <div class="video-caption">
-                        <h4>Family Fun Day</h4>
-                        <p>Making memories together</p>
-                    </div>
-                </div>
-
-                <!-- Video 5 -->
-                <div class="video-slide" data-video="assets/videos/WhatsApp Video 2026-03-01 at 3.14.31 PM.mp4">
-                    <div class="video-card-inner">
-                        <video muted preload="metadata" playsinline>
-                            <source src="assets/videos/WhatsApp Video 2026-03-01 at 3.14.31 PM.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <div class="video-play-btn"><i class="fas fa-play"></i></div>
-                            <div class="video-info"><span class="video-duration"><i class="fas fa-clock"></i>
-                                    0:15</span></div>
-                        </div>
-                    </div>
-                    <div class="video-caption">
-                        <h4>Play Zone Fun</h4>
-                        <p>Kids in action at Castle World</p>
-                    </div>
-                </div>
-
-                <!-- Video 6 -->
-                <div class="video-slide" data-video="assets/videos/WhatsApp Video 2026-03-01 at 3.14.32 PM.mp4">
-                    <div class="video-card-inner">
-                        <video muted preload="metadata" playsinline>
-                            <source src="assets/videos/WhatsApp Video 2026-03-01 at 3.14.32 PM.mp4" type="video/mp4">
-                        </video>
-                        <div class="video-overlay">
-                            <div class="video-play-btn"><i class="fas fa-play"></i></div>
-                            <div class="video-info"><span class="video-duration"><i class="fas fa-clock"></i>
-                                    0:35</span></div>
-                        </div>
-                    </div>
-                    <div class="video-caption">
-                        <h4>Adventure Awaits</h4>
-                        <p>Explore the excitement!</p>
-                    </div>
+                    <a href="reservation-form.html?activity=softplay" class="btn btn-green" id="book-softplay"><i
+                            class="fas fa-calendar-check"></i> Book
+                        Reservation</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-
-    <!-- VIDEO LIGHTBOX -->
-    <div class="video-lightbox" id="videoLightbox">
-        <div class="lightbox-backdrop"></div>
-        <div class="lightbox-content">
-            <button class="lightbox-close" id="lightboxClose" aria-label="Close video">
-                <i class="fas fa-times"></i>
-            </button>
-            <video controls id="lightboxVideo" playsinline>
-                <source src="" type="video/mp4" id="lightboxSource">
-            </video>
-        </div>
-    </div>
-
-    <!-- TESTIMONIALS (Onederland style) -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="testimonials-header" data-aos="fade-up">
-                <span class="section-badge fun"><i class="fas fa-quote-left"></i> Testimonials</span>
-                <h2 class="section-title">Happy <span class="highlight-green">Families</span></h2>
-            </div>
-            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+            <!-- Trampoline Zone -->
+            <div class="activity-row" data-aos="fade-up">
+                <div class="activity-image">
+                    <img src="assets/images/trampoline-park.png" alt="Trampoline Zone">
+                    <span class="age-badge"><i class="fas fa-users"></i> All Ages</span>
                 </div>
-                <blockquote>
-                    "Fun n Munch offers a delightful escape with a variety of thrilling activities and amazing
-                    restaurants. The vibrant atmosphere, engaging entertainment options, and friendly staff make it a
-                    perfect destination for families seeking fun and adventure. A memorable visit for all ages!"
-                </blockquote>
-                <div class="author">— Happy Customer, Google Review</div>
+                <div class="activity-info">
+                    <h3>Trampoline Zone</h3>
+                    <p>Bounce, flip, and soar at our premium trampoline zone! Connected trampolines, basketball dunk
+                        lanes, dodgeball courts, and foam pit diving — pure adrenaline for all ages!</p>
+                    <div class="activity-features">
+                        <span class="activity-feature"><i class="fas fa-check"></i> Free Jump</span>
+                        <span class="activity-feature"><i class="fas fa-check"></i> Dodgeball</span>
+                        <span class="activity-feature"><i class="fas fa-check"></i> Slam Dunk</span>
+                        <span class="activity-feature"><i class="fas fa-check"></i> Foam Dive</span>
+                    </div>
+                    <a href="reservation-form.html?activity=trampoline" class="btn btn-pink" id="book-trampoline"><i
+                            class="fas fa-calendar-check"></i> Book
+                        Reservation</a>
+                </div>
+            </div>
+
+            <!-- Mini Golf -->
+            <div class="activity-row" data-aos="fade-up">
+                <div class="activity-image">
+                    <img src="assets/images/mini-golf.png" alt="Mini Golf">
+                    <span class="age-badge"><i class="fas fa-users"></i> Ages 5+</span>
+                </div>
+                <div class="activity-info">
+                    <h3>Mini Golf Course</h3>
+                    <p>Challenge your family and friends on our beautifully themed outdoor mini golf course! Creative
+                        obstacles, water features, and castle-themed decorations make every round an adventure.</p>
+                    <div class="activity-features">
+                        <span class="activity-feature"><i class="fas fa-check"></i> 18 Holes</span>
+                        <span class="activity-feature"><i class="fas fa-check"></i> Outdoor</span>
+                        <span class="activity-feature"><i class="fas fa-check"></i> Themed</span>
+                        <span class="activity-feature"><i class="fas fa-check"></i> Family Fun</span>
+                    </div>
+                    <a href="reservation-form.html?activity=minigolf" class="btn btn-blue" id="book-minigolf"><i
+                            class="fas fa-calendar-check"></i> Book a
+                        Slot</a>
+                </div>
+            </div>
+
+            <!-- Car Rides -->
+            <div class="activity-row" data-aos="fade-up">
+                <div class="activity-image">
+                    <img src="assets/images/car-rides.png" alt="Car Rides">
+                    <span class="age-badge"><i class="fas fa-child"></i> Ages 3-10</span>
+                </div>
+                <div class="activity-info">
+                    <h3>Car Rides</h3>
+                    <p>Little drivers, start your engines! Our car ride track features mini electric cars, bumper cars,
+                        and racing experiences that kids absolutely love. Safe and thrilling rides for young
+                        adventurers!</p>
+                    <div class="activity-features">
+                        <span class="activity-feature"><i class="fas fa-check"></i> Electric Cars</span>
+                        <span class="activity-feature"><i class="fas fa-check"></i> Bumper Cars</span>
+                        <span class="activity-feature"><i class="fas fa-check"></i> Racing Track</span>
+                        <span class="activity-feature"><i class="fas fa-check"></i> Safe</span>
+                    </div>
+                    <a href="#" class="btn btn-orange" id="book-carrides"><i class="fas fa-calendar-check"></i> Book
+                        Now</a>
+                </div>
             </div>
         </div>
     </section>
