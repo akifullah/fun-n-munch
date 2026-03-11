@@ -53,46 +53,55 @@
     <!-- Mobile Overlay -->
     <div class="menu-overlay" id="menuOverlay"></div>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <!-- Slider -->
-        <div class="hero-slide active">
-            <img src="assets/images/hero-fun.png" alt="Fun n Munch Entertainment">
-        </div>
-        <div class="hero-slide">
-            <img src="assets/images/castle-softplay.png" alt="Castle World">
-        </div>
-        <div class="hero-slide">
-            <img src="assets/images/hero-munch.png" alt="Delicious Dining">
-        </div>
-
-        <!-- Content -->
-        <div class="hero-content">
-            <div class="container">
-                <span class="hero-badge"><i class="fas fa-star"></i> #1 Family Destination</span>
-                <h1 class="hero-title">Where <span class="text-yellow">Fun</span> Meets <span class="">Flavor!</span>
-                </h1>
-                <p class="hero-description">Thrilling adventures at <strong>Castle World</strong> + mouth-watering food
-                    from <strong>6 restaurants</strong> — all under one roof!</p>
-                <div class="hero-buttons">
-                    <a href="./fun.html" class="btn btn-yellow">Explore Castle
-                        World</a>
-                    <a href="./munch.html" class="btn btn-outline-white">View
-                        Restaurants</a>
-                </div>
+    <!-- HERO — Split Fun vs Munch -->
+    <section class="hero-split" id="home">
+        <!-- FUN Side -->
+        <a href="./fun.html" class="hero-half hero-fun" id="heroFun">
+            <img src="assets/images/hero-fun.png" alt="Castle World – Fun Zone" class="hero-half-bg">
+            <div class="hero-half-overlay"></div>
+            <div class="hero-half-content">
+                <span class="hero-half-badge"><i class="fas fa-chess-rook"></i> Castle World</span>
+                <h2 class="hero-half-title">Fun</h2>
+                <p class="hero-half-desc">Soft Play • Trampolines • Mini Golf • Car Rides</p>
+                <span class="hero-half-cta">Explore Now <i class="fas fa-arrow-right"></i></span>
             </div>
+            <!-- Floating decorative elements -->
+            <div class="hero-half-particles">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+        </a>
+
+        <!-- Divider -->
+        <div class="hero-split-divider">
+            <div class="divider-line"></div>
+            <div class="divider-badge">
+                <img src="assets/images/logo.png" alt="Fun n Munch" class="divider-logo">
+            </div>
+            <div class="divider-line"></div>
         </div>
 
-        <!-- Dots -->
-        <div class="hero-dots">
-            <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
-            <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
-            <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
-        </div>
-
+        <!-- MUNCH Side -->
+        <a href="./munch.html" class="hero-half hero-munch" id="heroMunch">
+            <img src="assets/images/hero-munch.png" alt="Munch Zone – Restaurants" class="hero-half-bg">
+            <div class="hero-half-overlay"></div>
+            <div class="hero-half-content">
+                <span class="hero-half-badge"><i class="fas fa-utensils"></i>Restaurants</span>
+                <h2 class="hero-half-title">Munch</h2>
+                <p class="hero-half-desc">Coffee • Street Food • Italian • Fine Dining • Desserts</p>
+                <span class="hero-half-cta">View Restaurants <i class="fas fa-arrow-right"></i></span>
+            </div>
+            <!-- Floating decorative elements -->
+            <div class="hero-half-particles">
+                <i class="fas fa-coffee"></i>
+                <i class="fas fa-pizza-slice"></i>
+                <i class="fas fa-ice-cream"></i>
+            </div>
+        </a>
     </section>
     <!-- Quick Links -->
-    <div class="hero-quick-links">
+    <!-- <div class="hero-quick-links">
         <a href="./fun.html" class="quick-link-card">
             <div class="ql-icon"><i class="fas fa-chess-rook"></i></div>
             <div class="ql-text">
@@ -109,10 +118,10 @@
             </div>
             <i class="fas fa-arrow-right ql-arrow"></i>
         </a>
-    </div>
+    </div> -->
 
 
-  
+
 
     <!-- GALLERY -->
     <section class="gallery" id="gallery">
@@ -480,33 +489,7 @@
             });
         });
 
-        // Hero slider
-        const heroSlides = document.querySelectorAll('.hero-slide');
-        const heroDots = document.querySelectorAll('.hero-dot');
-        let currentSlide = 0;
-        let slideInterval;
-
-        function showSlide(idx) {
-            heroSlides.forEach(s => s.classList.remove('active'));
-            heroDots.forEach(d => d.classList.remove('active'));
-            heroSlides[idx].classList.add('active');
-            heroDots[idx].classList.add('active');
-            currentSlide = idx;
-        }
-
-        function startSlider() {
-            slideInterval = setInterval(() => showSlide((currentSlide + 1) % heroSlides.length), 4500);
-        }
-
-        heroDots.forEach(dot => {
-            dot.addEventListener('click', () => {
-                clearInterval(slideInterval);
-                showSlide(parseInt(dot.dataset.slide));
-                startSlider();
-            });
-        });
-
-        startSlider();
+        // Hero split section - no slider needed, navigation is via direct links
 
         // Back to top
         const backToTop = document.getElementById('backToTop');
