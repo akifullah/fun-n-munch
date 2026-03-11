@@ -22,6 +22,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reservation.css">
+
 </head>
 
 <body>
@@ -55,6 +57,7 @@
 
 
 
+
     <!-- CASTLE WORLD ACTIVITIES -->
     <section class="activities" id="castle-world">
         <div class="container">
@@ -65,95 +68,124 @@
                     Castle World offers exciting activities for every age group — from toddlers to adults!
                 </p>
             </div>
-
-            <!-- Soft Play -->
-            <div class="activity-row" data-aos="fade-up">
-                <div class="activity-image">
-                    <img src="assets/images/castle-softplay.png" alt="Soft Play & Trampoline">
-                    <span class="age-badge"><i class="fas fa-child"></i> Ages 2-12</span>
-                </div>
-                <div class="activity-info">
-                    <h3>Soft Play & Trampoline Park</h3>
-                    <p>Let your kids explore our magnificent castle-themed soft play area! Multi-level climbing
-                        structures, ball pits, slides, and a state-of-the-art trampoline park with foam pits and
-                        basketball hoops.</p>
-                    <div class="activity-features">
-                        <span class="activity-feature"><i class="fas fa-check"></i> Ball Pits</span>
-                        <span class="activity-feature"><i class="fas fa-check"></i> Slides</span>
-                        <span class="activity-feature"><i class="fas fa-check"></i> Trampolines</span>
-                        <span class="activity-feature"><i class="fas fa-check"></i> Foam Pit</span>
-                    </div>
-                    <a href="reservation-form.html?activity=softplay" class="btn btn-green" id="book-softplay"><i
-                            class="fas fa-calendar-check"></i> Book
-                        Reservation</a>
-                </div>
-            </div>
-
-            <!-- Trampoline Zone -->
-            <div class="activity-row" data-aos="fade-up">
-                <div class="activity-image">
-                    <img src="assets/images/trampoline-park.png" alt="Trampoline Zone">
-                    <span class="age-badge"><i class="fas fa-users"></i> All Ages</span>
-                </div>
-                <div class="activity-info">
-                    <h3>Trampoline Zone</h3>
-                    <p>Bounce, flip, and soar at our premium trampoline zone! Connected trampolines, basketball dunk
-                        lanes, dodgeball courts, and foam pit diving — pure adrenaline for all ages!</p>
-                    <div class="activity-features">
-                        <span class="activity-feature"><i class="fas fa-check"></i> Free Jump</span>
-                        <span class="activity-feature"><i class="fas fa-check"></i> Dodgeball</span>
-                        <span class="activity-feature"><i class="fas fa-check"></i> Slam Dunk</span>
-                        <span class="activity-feature"><i class="fas fa-check"></i> Foam Dive</span>
-                    </div>
-                    <a href="reservation-form.html?activity=trampoline" class="btn btn-pink" id="book-trampoline"><i
-                            class="fas fa-calendar-check"></i> Book
-                        Reservation</a>
-                </div>
-            </div>
-
-            <!-- Mini Golf -->
-            <div class="activity-row" data-aos="fade-up">
-                <div class="activity-image">
-                    <img src="assets/images/mini-golf.png" alt="Mini Golf">
-                    <span class="age-badge"><i class="fas fa-users"></i> Ages 5+</span>
-                </div>
-                <div class="activity-info">
-                    <h3>Mini Golf Course</h3>
-                    <p>Challenge your family and friends on our beautifully themed outdoor mini golf course! Creative
-                        obstacles, water features, and castle-themed decorations make every round an adventure.</p>
-                    <div class="activity-features">
-                        <span class="activity-feature"><i class="fas fa-check"></i> Outdoor</span>
-                        <span class="activity-feature"><i class="fas fa-check"></i> Themed</span>
-                        <span class="activity-feature"><i class="fas fa-check"></i> Family Fun</span>
-                    </div>
-                    <a href="reservation-form.html?activity=minigolf" class="btn btn-blue" id="book-minigolf"><i
-                            class="fas fa-calendar-check"></i> Book a
-                        Slot</a>
-                </div>
-            </div>
-
-            <!-- Car Rides -->
-            <div class="activity-row" data-aos="fade-up">
-                <div class="activity-image">
-                    <img src="assets/images/car-rides.png" alt="Car Rides">
-                    <span class="age-badge"><i class="fas fa-child"></i> Ages 3-10</span>
-                </div>
-                <div class="activity-info">
-                    <h3>Car Rides</h3>
-                    <p>Little drivers, start your engines! Our car ride track features mini electric cars,
-                        and racing experiences that kids absolutely love. Safe and thrilling rides for young
-                        adventurers!</p>
-                    <div class="activity-features">
-                        <span class="activity-feature"><i class="fas fa-check"></i> Electric Cars</span>
-                        <span class="activity-feature"><i class="fas fa-check"></i> Ninja Warriors</span>
-                        <span class="activity-feature"><i class="fas fa-check"></i> Racing Track</span>
-                        <span class="activity-feature"><i class="fas fa-check"></i> Safe</span>
-                    </div>
-                    <a href="#" class="btn btn-orange" id="book-carrides"><i class="fas fa-calendar-check"></i> Book
-                        Now</a>
-                </div>
-            </div>
         </div>
+
+        <!-- CATEGORY TOGGLE -->
+        <section class="res-categories" id="booking">
+            <div class="container">
+                <div class="category-toggle" data-aos="fade-up">
+                    <button class="cat-toggle-btn active" data-category="indoor" id="toggleIndoor">
+                        <i class="fas fa-chess-rook"></i>
+                        <span>Indoor Activities</span>
+                        <small>Soft Play & Trampoline</small>
+                    </button>
+                    <button class="cat-toggle-btn" data-category="outdoor" id="toggleOutdoor">
+                        <i class="fas fa-golf-ball"></i>
+                        <span>Outdoor Activities</span>
+                        <small>Mini Golf Course</small>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- INDOOR SECTION -->
+        <section class="res-section indoor-section active" id="indoorSection">
+            <div class="container">
+                <!-- Soft Play -->
+                <div class="activity-row" data-aos="fade-up">
+                    <div class="activity-image">
+                        <img src="assets/images/castle-softplay.png" alt="Soft Play & Trampoline">
+                        <span class="age-badge"><i class="fas fa-child"></i> Ages 2-12</span>
+                    </div>
+                    <div class="activity-info">
+                        <h3>Soft Play & Trampoline Park</h3>
+                        <p>Let your kids explore our magnificent castle-themed soft play area! Multi-level climbing
+                            structures, ball pits, slides, and a state-of-the-art trampoline park with foam pits and
+                            basketball hoops.</p>
+                        <div class="activity-features">
+                            <span class="activity-feature"><i class="fas fa-check"></i> Ball Pits</span>
+                            <span class="activity-feature"><i class="fas fa-check"></i> Slides</span>
+                            <span class="activity-feature"><i class="fas fa-check"></i> Junior Ninja Warrior</span>
+                            <span class="activity-feature"><i class="fas fa-check"></i> Trampolines</span>
+                            <span class="activity-feature"><i class="fas fa-check"></i> Foam Pit</span>
+                        </div>
+                        <a href="reservation-form.html?activity=softplay" class="btn btn-green" id="book-softplay"><i
+                                class="fas fa-calendar-check"></i> Book
+                            Reservation</a>
+                    </div>
+                </div>
+
+                <!-- Trampoline Zone -->
+                <div class="activity-row" data-aos="fade-up">
+                    <div class="activity-image">
+                        <img src="assets/images/trampoline-park.png" alt="Trampoline Zone">
+                        <span class="age-badge"><i class="fas fa-users"></i> All Ages</span>
+                    </div>
+                    <div class="activity-info">
+                        <h3>Trampoline Zone</h3>
+                        <p>Bounce, flip, and soar at our premium trampoline zone! Connected trampolines, basketball dunk
+                            lanes, dodgeball courts, and foam pit diving — pure adrenaline for all ages!</p>
+                        <div class="activity-features">
+                            <span class="activity-feature"><i class="fas fa-check"></i> Free Jump</span>
+                            <span class="activity-feature"><i class="fas fa-check"></i> Basket Ball </span>
+                            <span class="activity-feature"><i class="fas fa-check"></i> Slam Dunk</span>
+                        </div>
+                        <a href="reservation-form.html?activity=trampoline" class="btn btn-pink" id="book-trampoline"><i
+                                class="fas fa-calendar-check"></i> Book
+                            Reservation</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUTDOOR SECTION-->
+        <section class="res-section  outdoor-section" id="outdoorSection">
+            <div class="container">
+                <!-- Mini Golf -->
+                <div class="activity-row" data-aos="fade-up">
+                    <div class="activity-image">
+                        <img src="assets/images/mini-golf.png" alt="Mini Golf">
+                        <span class="age-badge"><i class="fas fa-users"></i> Ages 5+</span>
+                    </div>
+                    <div class="activity-info">
+                        <h3>Mini Golf Course</h3>
+                        <p>Challenge your family and friends on our beautifully themed outdoor mini golf course!
+                            Creative
+                            obstacles, water features, and castle-themed decorations make every round an adventure.</p>
+                        <div class="activity-features">
+                            <span class="activity-feature"><i class="fas fa-check"></i> Outdoor</span>
+                            <span class="activity-feature"><i class="fas fa-check"></i> Themed</span>
+                            <span class="activity-feature"><i class="fas fa-check"></i> Family Fun</span>
+                        </div>
+                        <a href="reservation-form.html?activity=minigolf" class="btn btn-blue" id="book-minigolf"><i
+                                class="fas fa-calendar-check"></i> Book a
+                            Slot</a>
+                    </div>
+                </div>
+
+                <!-- Car Rides -->
+                <div class="activity-row" data-aos="fade-up">
+                    <div class="activity-image">
+                        <img src="assets/images/car-rides.png" alt="Car Rides">
+                        <span class="age-badge"><i class="fas fa-child"></i> Ages 3-10</span>
+                    </div>
+                    <div class="activity-info">
+                        <h3>Car Rides</h3>
+                        <p>Little drivers, start your engines! Our car ride track features mini electric cars,
+                            and racing experiences that kids absolutely love. Safe and thrilling rides for young
+                            adventurers!</p>
+                        <div class="activity-features">
+                            <span class="activity-feature"><i class="fas fa-check"></i> Electric Cars</span>
+                            <span class="activity-feature"><i class="fas fa-check"></i> Safe</span>
+                        </div>
+                        <a href="#" class="btn btn-orange" id="book-carrides"><i class="fas fa-calendar-check"></i> Book
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
     </section>
 
     <!-- CTA BANNER -->
@@ -222,7 +254,7 @@
                     <h4>Get In Touch</h4>
                     <div class="footer-contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>Fun n Munch Complex,<br>Your City, Pakistan</p>
+                        <p>FUN N MUNCH,<br>MULTAN 60000 AIGA</br></p>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fas fa-phone-alt"></i>
@@ -260,6 +292,30 @@
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <script>
+
+        // Category Toggle
+        const toggleBtns = document.querySelectorAll('.cat-toggle-btn');
+        const indoorSection = document.getElementById('indoorSection');
+        const outdoorSection = document.getElementById('outdoorSection');
+
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                toggleBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.dataset.category;
+                if (category === 'indoor') {
+                    indoorSection.classList.add('active');
+                    outdoorSection.classList.remove('active');
+                } else {
+                    outdoorSection.classList.add('active');
+                    indoorSection.classList.remove('active');
+                }
+
+                // Re-init AOS for newly visible elements
+                setTimeout(() => AOS.refresh(), 100);
+            });
+        });
         // Preloader
         window.addEventListener('load', () => {
             setTimeout(() => document.getElementById('preloader').classList.add('hidden'), 600);
