@@ -2696,3 +2696,333 @@ ol {
         bottom: 16px;
     }
 }
+
+/* ===================================================
+   MUNCH HERO BANNER — Split image with restaurant pills
+   =================================================== */
+
+.munch-hero-banner {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 70px; /* navbar height offset */
+}
+
+/* Split halves */
+.munch-banner-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    z-index: 0;
+}
+
+.munch-banner-half {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    transition: transform 8s ease;
+}
+
+.munch-hero-banner:hover .munch-banner-half {
+    transform: scale(1.04);
+}
+
+/* Dark gradient overlay */
+.munch-banner-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+        135deg,
+        rgba(10, 10, 20, 0.72) 0%,
+        rgba(20, 10, 40, 0.78) 50%,
+        rgba(10, 10, 20, 0.72) 100%
+    );
+}
+
+/* Central divider glow line */
+.munch-banner-bg::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    bottom: 10%;
+    width: 2px;
+    background: linear-gradient(to bottom,
+        transparent,
+        rgba(255, 107, 53, 0.6) 30%,
+        rgba(249, 202, 36, 0.8) 50%,
+        rgba(255, 107, 53, 0.6) 70%,
+        transparent
+    );
+    transform: translateX(-50%);
+    z-index: 2;
+    border-radius: 2px;
+}
+
+/* Content wrapper */
+.munch-banner-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 60px 20px 100px;
+}
+
+.munch-banner-inner {
+    text-align: center;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* Eyebrow label */
+.munch-banner-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 107, 53, 0.2);
+    border: 1.5px solid rgba(255, 107, 53, 0.5);
+    color: #ffb38a;
+    padding: 7px 22px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    backdrop-filter: blur(8px);
+}
+
+/* Main title */
+.munch-banner-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5.5vw, 3.8rem);
+    color: #fff;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+}
+
+.munch-banner-title .highlight-orange {
+    color: var(--yellow);
+}
+
+/* Subtitle */
+.munch-banner-subtitle {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 36px;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+/* Pills row */
+.munch-banner-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 36px;
+}
+
+.munch-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s var(--ease);
+    cursor: pointer;
+}
+
+.munch-pill:hover {
+    background: rgba(255, 107, 53, 0.3);
+    border-color: rgba(255, 107, 53, 0.6);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(255, 107, 53, 0.25);
+}
+
+.munch-pill.featured {
+    background: rgba(249, 202, 36, 0.2);
+    border-color: rgba(249, 202, 36, 0.5);
+    color: var(--yellow);
+}
+
+.munch-pill.featured:hover {
+    background: rgba(249, 202, 36, 0.35);
+    border-color: var(--yellow);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(249, 202, 36, 0.3);
+}
+
+/* CTA scroll down button */
+.munch-banner-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 32px;
+    border-radius: 50px;
+    background: var(--orange);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 0.3s var(--ease);
+    box-shadow: 0 6px 24px rgba(255, 107, 53, 0.4);
+}
+
+.munch-banner-cta:hover {
+    background: var(--yellow);
+    color: var(--text-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(249, 202, 36, 0.4);
+}
+
+.munch-banner-cta i {
+    animation: bounceDown 1.5s ease infinite;
+}
+
+@keyframes bounceDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
+}
+
+/* Wave divider at bottom */
+.munch-banner-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+    line-height: 0;
+}
+
+.munch-banner-wave svg {
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .munch-hero-banner {
+        min-height: 480px;
+        padding-top: 60px;
+    }
+
+    .munch-banner-title {
+        font-size: 1.9rem;
+    }
+
+    .munch-banner-subtitle {
+        font-size: 0.92rem;
+    }
+
+    .munch-pill {
+        padding: 7px 15px;
+        font-size: 0.78rem;
+    }
+
+    .munch-banner-bg::after {
+        display: none; /* hide divider line on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .munch-hero-banner {
+        min-height: 420px;
+    }
+
+    .munch-banner-pills {
+        gap: 7px;
+    }
+
+    .munch-pill {
+        padding: 6px 12px;
+        font-size: 0.74rem;
+    }
+}
+
+/* ===================================================
+   CASTLE WORLD HERO BANNER — Fun.html theme overrides
+   =================================================== */
+
+/* Green-tinted overlay for Castle World */
+.fun-banner-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(10, 20, 10, 0.72) 0%,
+        rgba(15, 35, 15, 0.80) 50%,
+        rgba(10, 20, 10, 0.72) 100%
+    ) !important;
+}
+
+/* Green divider glow line */
+.fun-hero-banner .munch-banner-bg::after {
+    background: linear-gradient(to bottom,
+        transparent,
+        rgba(91, 187, 79, 0.6) 30%,
+        rgba(249, 202, 36, 0.8) 50%,
+        rgba(91, 187, 79, 0.6) 70%,
+        transparent
+    ) !important;
+}
+
+/* Green eyebrow badge */
+.fun-eyebrow {
+    background: rgba(91, 187, 79, 0.2) !important;
+    border-color: rgba(91, 187, 79, 0.5) !important;
+    color: #a8e89c !important;
+}
+
+/* Yellow highlight on title */
+.fun-highlight {
+    color: var(--yellow);
+}
+
+/* Fun pills — green tint */
+.munch-pill.fun-pill:hover {
+    background: rgba(91, 187, 79, 0.3);
+    border-color: rgba(91, 187, 79, 0.6);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(91, 187, 79, 0.25);
+}
+
+/* Featured pill — green/yellow highlight */
+.munch-pill.featured-fun {
+    background: rgba(91, 187, 79, 0.2);
+    border-color: rgba(91, 187, 79, 0.5);
+    color: #a8e89c;
+}
+
+.munch-pill.featured-fun:hover {
+    background: rgba(91, 187, 79, 0.35);
+    border-color: var(--green);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(91, 187, 79, 0.3);
+}
+
+/* Green CTA button */
+.fun-banner-cta {
+    background: var(--green) !important;
+    box-shadow: 0 6px 24px rgba(91, 187, 79, 0.45) !important;
+}
+
+.fun-banner-cta:hover {
+    background: var(--yellow) !important;
+    color: var(--text-dark) !important;
+    box-shadow: 0 10px 30px rgba(249, 202, 36, 0.4) !important;
+}
