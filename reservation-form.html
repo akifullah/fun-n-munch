@@ -111,25 +111,10 @@
                                                 <i class="fas fa-chess-rook"></i>
                                             </div>
                                             <div class="activity-option-text">
-                                                <strong>Soft Play Area</strong>
-                                                <span>Ball pits, slides & climbing walls • Ages 2-12</span>
+                                                <strong>Soft Play & Trampoline Park</strong>
+                                                <span>Ball pits, slides, trampolines & climbing walls • Ages 2-12</span>
                                             </div>
-                                            <div class="activity-option-price">Rs. 1,500</div>
-                                            <div class="activity-option-check"><i class="fas fa-check"></i></div>
-                                        </div>
-                                    </label>
-
-                                    <label class="activity-option" id="option-trampoline">
-                                        <input type="radio" name="activity" value="trampoline">
-                                        <div class="activity-option-content">
-                                            <div class="activity-option-icon pink-bg">
-                                                <i class="fas fa-running"></i>
-                                            </div>
-                                            <div class="activity-option-text">
-                                                <strong>Trampoline Park</strong>
-                                                <span>Bounce, flip & dodgeball • All Ages</span>
-                                            </div>
-                                            <div class="activity-option-price">Rs. 2,000</div>
+                                            <div class="activity-option-price">Rs. 999/-</div>
                                             <div class="activity-option-check"><i class="fas fa-check"></i></div>
                                         </div>
                                     </label>
@@ -144,7 +129,7 @@
                                                 <strong>Mini Golf (Outdoor)</strong>
                                                 <span>18-hole themed course • Ages 5+</span>
                                             </div>
-                                            <div class="activity-option-price">Rs. 1,200</div>
+                                            <div class="activity-option-price">Rs. 750/-</div>
                                             <div class="activity-option-check"><i class="fas fa-check"></i></div>
                                         </div>
                                     </label>
@@ -566,28 +551,19 @@
         // Activity data
         const activityData = {
             softplay: {
-                name: 'Soft Play Area',
-                price: 1500,
-                priceLabel: 'Rs. 1,500',
-                duration: '2 Hours',
+                name: 'Soft Play & Trampoline Park',
+                price: 999,
+                priceLabel: 'Rs. 999/-',
+                duration: '45 Minutes',
                 age: 'Ages 2-12',
-                desc: 'Castle-themed multi-level play structure with ball pits, slides, tunnels, and climbing walls.',
+                desc: 'Castle-themed play structure with ball pits, slides, trampolines, and climbing walls. Grip Socks: Rs. 100/-',
                 image: 'assets/images/castle-softplay.png'
-            },
-            trampoline: {
-                name: 'Trampoline Park',
-                price: 2000,
-                priceLabel: 'Rs. 2,000',
-                duration: '1 Hour',
-                age: 'All Ages',
-                desc: 'Connected trampolines, slam dunk lanes, dodgeball courts, and foam pit diving.',
-                image: 'assets/images/trampoline-park.png'
             },
             minigolf: {
                 name: 'Mini Golf (Outdoor)',
-                price: 1200,
-                priceLabel: 'Rs. 1,200',
-                duration: '~45 Minutes',
+                price: 750,
+                priceLabel: 'Rs. 750/-',
+                duration: '20 Minutes',
                 age: 'Ages 5+',
                 desc: '18-hole themed outdoor mini golf course with creative obstacles and water features.',
                 image: 'assets/images/mini-golf.png'
@@ -756,8 +732,9 @@
         // Pre-select activity from URL params
         const urlParams = new URLSearchParams(window.location.search);
         const preActivity = urlParams.get('activity');
-        if (preActivity && activityData[preActivity]) {
-            const radio = document.querySelector(`input[name="activity"][value="${preActivity}"]`);
+        const mappedActivity = (preActivity === 'trampoline') ? 'softplay' : preActivity;
+        if (mappedActivity && activityData[mappedActivity]) {
+            const radio = document.querySelector(`input[name="activity"][value="${mappedActivity}"]`);
             if (radio) {
                 radio.checked = true;
                 radio.dispatchEvent(new Event('change'));
