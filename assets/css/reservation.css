@@ -974,6 +974,23 @@
     color: var(--text-white);
 }
 
+/* ---------- Activity Option Extra Info ---------- */
+.activity-option-extra {
+    padding: 8px 16px 8px 70px;
+    font-size: 0.82rem;
+    color: var(--text-body);
+    background: rgba(255, 152, 0, 0.06);
+    border-top: 1px dashed rgba(255, 152, 0, 0.2);
+    border-radius: 0 0 16px 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.activity-option-extra i {
+    font-size: 0.9rem;
+}
+
 /* ---------- Form Grid (Step 2) ---------- */
 .form-grid {
     display: grid;

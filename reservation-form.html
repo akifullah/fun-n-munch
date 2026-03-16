@@ -111,11 +111,14 @@
                                                 <i class="fas fa-chess-rook"></i>
                                             </div>
                                             <div class="activity-option-text">
-                                                <strong>Soft Play & Trampoline Park</strong>
-                                                <span>Ball pits, slides, trampolines & climbing walls • Ages 2-12</span>
+                                                <strong>Indoor Facilities Package</strong>
+                                                <span>Soft Play, Trampoline & Ninja Warrior • 45 min • Ages 2-12</span>
                                             </div>
                                             <div class="activity-option-price">Rs. 999/-</div>
                                             <div class="activity-option-check"><i class="fas fa-check"></i></div>
+                                        </div>
+                                        <div class="activity-option-extra">
+                                            <i class="fas fa-socks" style="color: var(--orange);"></i> Grip Socks: <strong>Rs. 100/-</strong>
                                         </div>
                                     </label>
 
@@ -127,9 +130,24 @@
                                             </div>
                                             <div class="activity-option-text">
                                                 <strong>Mini Golf (Outdoor)</strong>
-                                                <span>18-hole themed course • Ages 5+</span>
+                                                <span>18-hole themed course • 20 min • Ages 5+</span>
                                             </div>
                                             <div class="activity-option-price">Rs. 750/-</div>
+                                            <div class="activity-option-check"><i class="fas fa-check"></i></div>
+                                        </div>
+                                    </label>
+
+                                    <label class="activity-option" id="option-electriccar">
+                                        <input type="radio" name="activity" value="electriccar">
+                                        <div class="activity-option-content">
+                                            <div class="activity-option-icon" style="background: var(--orange); color: white;">
+                                                <i class="fas fa-car"></i>
+                                            </div>
+                                            <div class="activity-option-text">
+                                                <strong>Electric Car Rides</strong>
+                                                <span>Mini electric cars on a safe track • Ages 3-10</span>
+                                            </div>
+                                            <div class="activity-option-price">Rs. 200/-</div>
                                             <div class="activity-option-check"><i class="fas fa-check"></i></div>
                                         </div>
                                     </label>
@@ -551,12 +569,12 @@
         // Activity data
         const activityData = {
             softplay: {
-                name: 'Soft Play & Trampoline Park',
+                name: 'Indoor Facilities Package',
                 price: 999,
                 priceLabel: 'Rs. 999/-',
                 duration: '45 Minutes',
                 age: 'Ages 2-12',
-                desc: 'Castle-themed play structure with ball pits, slides, trampolines, and climbing walls. Grip Socks: Rs. 100/-',
+                desc: 'Soft Play Area, Trampoline Park & Ninja Warrior — all included in one 45-min session. Grip Socks: Rs. 100/-',
                 image: 'assets/images/castle-softplay.png'
             },
             minigolf: {
@@ -567,6 +585,15 @@
                 age: 'Ages 5+',
                 desc: '18-hole themed outdoor mini golf course with creative obstacles and water features.',
                 image: 'assets/images/mini-golf.png'
+            },
+            electriccar: {
+                name: 'Electric Car Rides',
+                price: 200,
+                priceLabel: 'Rs. 200/-',
+                duration: 'Per Ride',
+                age: 'Ages 3-10',
+                desc: 'Mini electric cars on a safe outdoor track. Thrilling rides for young adventurers!',
+                image: 'assets/images/car-rides.png'
             }
         };
 
