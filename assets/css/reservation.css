@@ -868,6 +868,66 @@
     font-size: 0.88rem;
 }
 
+/* ---------- Activity Tabs (Indoor / Outdoor) ---------- */
+.activity-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+    background: var(--bg-light);
+    padding: 6px;
+    border-radius: 14px;
+    border: 1px solid var(--border-light);
+}
+
+.activity-tab {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.activity-tab i {
+    font-size: 1rem;
+    transition: color 0.35s ease;
+}
+
+.activity-tab:hover {
+    color: var(--green);
+    background: rgba(91, 187, 79, 0.04);
+}
+
+.activity-tab.active {
+    background: var(--bg-white);
+    color: var(--green);
+    border-color: var(--green);
+    box-shadow: 0 4px 16px rgba(91, 187, 79, 0.12);
+}
+
+.activity-tab.active i {
+    color: var(--green);
+}
+
+/* ---------- Activity Tab Content ---------- */
+.activity-tab-content {
+    display: none;
+    animation: fadeSlideIn 0.4s ease forwards;
+}
+
+.activity-tab-content.active {
+    display: block;
+}
+
 /* ---------- Activity Options (Step 1) ---------- */
 .activity-options {
     display: flex;
@@ -1578,7 +1638,7 @@
     }
 
     .form-card {
-        padding: 24px;
+        padding: 20px;
     }
 
     .form-sidebar {
@@ -1621,13 +1681,67 @@
         flex-direction: column;
     }
 
+    /* --- Activity Tabs compact --- */
+    .activity-tabs {
+        padding: 4px;
+        gap: 6px;
+        margin-bottom: 16px;
+    }
+
+    .activity-tab {
+        padding: 10px 14px;
+        font-size: 0.85rem;
+        gap: 6px;
+    }
+
+    .activity-tab i {
+        font-size: 0.85rem;
+    }
+
+    /* --- Activity Option compact row layout --- */
     .activity-option-content {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        padding: 14px 12px;
+        gap: 10px;
+    }
+
+    .activity-option-icon {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        font-size: 0.95rem;
+    }
+
+    .activity-option-text strong {
+        font-size: 0.9rem;
+    }
+
+    .activity-option-text span {
+        font-size: 0.72rem;
     }
 
     .activity-option-price {
-        order: 4;
-        margin-left: 66px;
+        font-size: 0.95rem;
+    }
+
+    .activity-option-price small {
+        font-size: 0.65rem;
+    }
+
+    .activity-option-check {
+        width: 24px;
+        height: 24px;
+        font-size: 0.6rem;
+    }
+
+    .activity-option-extra {
+        padding: 6px 12px 6px 60px;
+        font-size: 0.75rem;
+    }
+
+    .activity-options {
+        gap: 10px;
+        margin-bottom: 20px;
     }
 
     .booking-card-header {
@@ -1650,6 +1764,23 @@
         font-size: 0.82rem;
     }
 
+    .form-card {
+        padding: 16px;
+    }
+
+    .form-card-header {
+        margin-bottom: 20px;
+        padding-bottom: 16px;
+    }
+
+    .form-card-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .form-card-header p {
+        font-size: 0.8rem;
+    }
+
     .form-nav {
         flex-direction: column-reverse;
         gap: 12px;
@@ -1660,8 +1791,69 @@
         justify-content: center;
     }
 
+    /* --- Activity cards even more compact --- */
     .activity-option-content {
-        padding: 16px;
+        padding: 12px 10px;
+        gap: 8px;
+    }
+
+    .activity-option-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 9px;
+        font-size: 0.85rem;
+    }
+
+    .activity-option-text strong {
+        font-size: 0.82rem;
+        margin-bottom: 1px;
+    }
+
+    .activity-option-text span {
+        font-size: 0.68rem;
+        line-height: 1.3;
+    }
+
+    .activity-option-price {
+        font-size: 0.85rem;
+    }
+
+    .activity-option-price small {
+        font-size: 0.6rem;
+    }
+
+    .activity-option-check {
+        width: 22px;
+        height: 22px;
+        font-size: 0.55rem;
+    }
+
+    .activity-option-extra {
+        padding: 5px 10px 5px 52px;
+        font-size: 0.72rem;
+        gap: 4px;
+    }
+
+    .activity-option-extra i {
+        font-size: 0.78rem;
+    }
+
+    .activity-options {
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    .activity-tabs {
+        padding: 3px;
+        gap: 4px;
+        margin-bottom: 14px;
+        border-radius: 12px;
+    }
+
+    .activity-tab {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+        border-radius: 9px;
     }
 
     .step-circle {

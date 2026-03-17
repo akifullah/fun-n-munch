@@ -103,54 +103,117 @@
                                     <h3><i class="fas fa-gamepad"></i> Choose Your Activity</h3>
                                     <p>Select the activity you'd like to book</p>
                                 </div>
-                                <div class="activity-options">
-                                    <label class="activity-option" id="option-softplay">
-                                        <input type="radio" name="activity" value="softplay">
-                                        <div class="activity-option-content">
-                                            <div class="activity-option-icon green-bg">
-                                                <i class="fas fa-chess-rook"></i>
-                                            </div>
-                                            <div class="activity-option-text">
-                                                <strong>Indoor Facilities Package</strong>
-                                                <span>Soft Play, Trampoline & Ninja Warrior • 45 min • Ages 2-12</span>
-                                            </div>
-                                            <div class="activity-option-price">Rs. 999/-<small>45 min</small></div>
-                                            <div class="activity-option-check"><i class="fas fa-check"></i></div>
-                                        </div>
-                                        <div class="activity-option-extra">
-                                            <i class="fas fa-socks" style="color: var(--orange);"></i> Grip Socks: <strong>Rs. 100/-</strong>
-                                        </div>
-                                    </label>
 
-                                    <label class="activity-option" id="option-minigolf">
-                                        <input type="radio" name="activity" value="minigolf">
-                                        <div class="activity-option-content">
-                                            <div class="activity-option-icon blue-bg">
-                                                <i class="fas fa-golf-ball"></i>
-                                            </div>
-                                            <div class="activity-option-text">
-                                                <strong>Mini Golf (Outdoor)</strong>
-                                                <span>18-hole themed course • 20 min • Ages 5+</span>
-                                            </div>
-                                            <div class="activity-option-price">Rs. 750/-<small>20 min</small></div>
-                                            <div class="activity-option-check"><i class="fas fa-check"></i></div>
-                                        </div>
-                                    </label>
+                                <!-- Indoor / Outdoor Tabs -->
+                                <div class="activity-tabs">
+                                    <button type="button" class="activity-tab active" data-tab="indoor">
+                                        <i class="fas fa-building"></i> Indoor
+                                    </button>
+                                    <button type="button" class="activity-tab" data-tab="outdoor">
+                                        <i class="fas fa-sun"></i> Outdoor
+                                    </button>
+                                </div>
 
-                                    <label class="activity-option" id="option-electriccar">
-                                        <input type="radio" name="activity" value="electriccar">
-                                        <div class="activity-option-content">
-                                            <div class="activity-option-icon" style="background: var(--orange); color: white;">
-                                                <i class="fas fa-car"></i>
+                                <!-- Indoor Activities -->
+                                <div class="activity-tab-content active" id="tab-indoor">
+                                    <div class="activity-options">
+                                        <label class="activity-option" id="option-softplay">
+                                            <input type="radio" name="activity" value="softplay">
+                                            <div class="activity-option-content">
+                                                <div class="activity-option-icon green-bg">
+                                                    <i class="fas fa-chess-rook"></i>
+                                                </div>
+                                                <div class="activity-option-text">
+                                                    <strong>Soft Play Area</strong>
+                                                    <span>Castle-themed soft play zone • 45 min • Ages 2-12</span>
+                                                </div>
+                                                <div class="activity-option-price">Rs. 999/-<small>45 min</small></div>
+                                                <div class="activity-option-check"><i class="fas fa-check"></i></div>
                                             </div>
-                                            <div class="activity-option-text">
-                                                <strong>Electric Car Rides</strong>
-                                                <span>Mini electric cars on a safe track • Per Ride • Ages 3-10</span>
+                                            <div class="activity-option-extra">
+                                                <i class="fas fa-socks" style="color: var(--orange);"></i> Grip Socks:
+                                                <strong>Rs. 100/-</strong>
                                             </div>
-                                            <div class="activity-option-price">Rs. 200/-<small>Per Ride</small></div>
-                                            <div class="activity-option-check"><i class="fas fa-check"></i></div>
-                                        </div>
-                                    </label>
+                                        </label>
+
+                                        <label class="activity-option" id="option-trampoline">
+                                            <input type="radio" name="activity" value="trampoline">
+                                            <div class="activity-option-content">
+                                                <div class="activity-option-icon pink-bg">
+                                                    <i class="fas fa-arrows-alt"></i>
+                                                </div>
+                                                <div class="activity-option-text">
+                                                    <strong>Trampoline Park</strong>
+                                                    <span>Bounce, flip & jump • 45 min • Ages 2-12</span>
+                                                </div>
+                                                <div class="activity-option-price">Rs. 999/-<small>45 min</small></div>
+                                                <div class="activity-option-check"><i class="fas fa-check"></i></div>
+                                            </div>
+                                            <div class="activity-option-extra">
+                                                <i class="fas fa-socks" style="color: var(--orange);"></i> Grip Socks:
+                                                <strong>Rs. 100/-</strong>
+                                            </div>
+                                        </label>
+
+                                        <label class="activity-option" id="option-ninja">
+                                            <input type="radio" name="activity" value="ninja">
+                                            <div class="activity-option-content">
+                                                <div class="activity-option-icon" style="background: var(--yellow); color: var(--text-dark);">
+                                                    <i class="fas fa-fist-raised"></i>
+                                                </div>
+                                                <div class="activity-option-text">
+                                                    <strong>Ninja Warrior</strong>
+                                                    <span>Obstacle course challenge • 45 min • Ages 2-12</span>
+                                                </div>
+                                                <div class="activity-option-price">Rs. 999/-<small>45 min</small></div>
+                                                <div class="activity-option-check"><i class="fas fa-check"></i></div>
+                                            </div>
+                                            <div class="activity-option-extra">
+                                                <i class="fas fa-socks" style="color: var(--orange);"></i> Grip Socks:
+                                                <strong>Rs. 100/-</strong>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Outdoor Activities -->
+                                <div class="activity-tab-content" id="tab-outdoor">
+                                    <div class="activity-options">
+                                        <label class="activity-option" id="option-minigolf">
+                                            <input type="radio" name="activity" value="minigolf">
+                                            <div class="activity-option-content">
+                                                <div class="activity-option-icon blue-bg">
+                                                    <i class="fas fa-golf-ball"></i>
+                                                </div>
+                                                <div class="activity-option-text">
+                                                    <strong>Mini Golf Course</strong>
+                                                    <span>Outdoor Mini Golf • 20 min • Ages 5+</span>
+                                                </div>
+                                                <div class="activity-option-price">Rs. 750/-<small>20 min</small></div>
+                                                <div class="activity-option-check"><i class="fas fa-check"></i></div>
+                                            </div>
+                                            <div class="activity-option-extra">
+                                                <i class="fas fa-socks" style="color: var(--orange);"></i> Grip Socks:
+                                                <strong>Rs. 100/-</strong>
+                                            </div>
+                                        </label>
+
+                                        <label class="activity-option" id="option-electriccar">
+                                            <input type="radio" name="activity" value="electriccar">
+                                            <div class="activity-option-content">
+                                                <div class="activity-option-icon"
+                                                    style="background: var(--orange); color: white;">
+                                                    <i class="fas fa-car"></i>
+                                                </div>
+                                                <div class="activity-option-text">
+                                                    <strong>Electric Car Rides</strong>
+                                                    <span>Mini electric cars on a safe track • Per Ride • Ages 3-10</span>
+                                                </div>
+                                                <div class="activity-option-price">Rs. 200/-<small>Per Ride</small></div>
+                                                <div class="activity-option-check"><i class="fas fa-check"></i></div>
+                                            </div>
+                                        </label>
+                                    </div>
                                 </div>
 
                                 <div class="form-nav">
@@ -569,22 +632,44 @@
         // Activity data
         const activityData = {
             softplay: {
-                name: 'Indoor Facilities Package',
+                name: 'Soft Play Area',
                 price: 999,
                 priceLabel: 'Rs. 999/-',
                 duration: '45 Minutes',
                 age: 'Ages 2-12',
-                desc: 'Soft Play Area, Trampoline Park & Ninja Warrior — all included in one 45-min session. Grip Socks: Rs. 100/-',
-                image: 'assets/images/castle-softplay.png'
+                desc: 'Castle-themed soft play zone with slides, tunnels & climbing structures. Grip Socks: Rs. 100/-',
+                image: 'assets/images/castle-softplay.png',
+                tab: 'indoor'
+            },
+            trampoline: {
+                name: 'Trampoline Park',
+                price: 999,
+                priceLabel: 'Rs. 999/-',
+                duration: '45 Minutes',
+                age: 'Ages 2-12',
+                desc: 'Bounce, flip & jump on interconnected trampolines. Grip Socks: Rs. 100/-',
+                image: 'assets/images/castle-softplay.png',
+                tab: 'indoor'
+            },
+            ninja: {
+                name: 'Ninja Warrior',
+                price: 999,
+                priceLabel: 'Rs. 999/-',
+                duration: '45 Minutes',
+                age: 'Ages 2-12',
+                desc: 'Obstacle course challenge — test your agility & balance. Grip Socks: Rs. 100/-',
+                image: 'assets/images/castle-softplay.png',
+                tab: 'indoor'
             },
             minigolf: {
-                name: 'Mini Golf (Outdoor)',
+                name: 'Mini Golf Course',
                 price: 750,
                 priceLabel: 'Rs. 750/-',
                 duration: '20 Minutes',
                 age: 'Ages 5+',
-                desc: '18-hole themed outdoor mini golf course with creative obstacles and water features.',
-                image: 'assets/images/mini-golf.png'
+                desc: 'Outdoor mini golf course with creative obstacles and water features. Grip Socks: Rs. 100/-',
+                image: 'assets/images/mini-golf.png',
+                tab: 'outdoor'
             },
             electriccar: {
                 name: 'Electric Car Rides',
@@ -593,9 +678,27 @@
                 duration: 'Per Ride',
                 age: 'Ages 3-10',
                 desc: 'Mini electric cars on a safe outdoor track. Thrilling rides for young adventurers!',
-                image: 'assets/images/car-rides.png'
+                image: 'assets/images/car-rides.png',
+                tab: 'outdoor'
             }
         };
+
+        // Tab switching logic
+        const activityTabs = document.querySelectorAll('.activity-tab');
+        const tabContents = document.querySelectorAll('.activity-tab-content');
+
+        function switchTab(tabName) {
+            activityTabs.forEach(t => t.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+            document.querySelector(`.activity-tab[data-tab="${tabName}"]`).classList.add('active');
+            document.getElementById('tab-' + tabName).classList.add('active');
+        }
+
+        activityTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                switchTab(tab.dataset.tab);
+            });
+        });
 
         // Form Steps
         let currentStep = 1;
@@ -633,9 +736,12 @@
         document.getElementById('toStep2').addEventListener('click', () => {
             const selected = document.querySelector('input[name="activity"]:checked');
             if (!selected) {
-                // Shake the activity options to show error
-                document.querySelector('.activity-options').classList.add('shake');
-                setTimeout(() => document.querySelector('.activity-options').classList.remove('shake'), 600);
+                // Shake the visible activity options to show error
+                const activeTab = document.querySelector('.activity-tab-content.active .activity-options');
+                if (activeTab) {
+                    activeTab.classList.add('shake');
+                    setTimeout(() => activeTab.classList.remove('shake'), 600);
+                }
                 return;
             }
             showStep(2);
@@ -759,12 +865,13 @@
         // Pre-select activity from URL params
         const urlParams = new URLSearchParams(window.location.search);
         const preActivity = urlParams.get('activity');
-        const mappedActivity = (preActivity === 'trampoline') ? 'softplay' : preActivity;
-        if (mappedActivity && activityData[mappedActivity]) {
-            const radio = document.querySelector(`input[name="activity"][value="${mappedActivity}"]`);
+        if (preActivity && activityData[preActivity]) {
+            const radio = document.querySelector(`input[name="activity"][value="${preActivity}"]`);
             if (radio) {
                 radio.checked = true;
                 radio.dispatchEvent(new Event('change'));
+                // Switch to the correct tab
+                switchTab(activityData[preActivity].tab);
             }
         }
 
